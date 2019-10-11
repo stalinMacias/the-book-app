@@ -1,0 +1,4 @@
+    
+    
+    This method is by creating a CSS file where you apply styles to all the HTML Components.
+    Then you go to your main js file.... (index.js) and you import the CSS file you have created!

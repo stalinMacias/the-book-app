@@ -1,0 +1,16 @@
+
+    As its name says, this method is by adding CSS Code inline a Component.....
+
+    * It has to be used the property called "style".
+    * This property accepts a JS with all the CSS properties defined inside it!
+
+    
+    Example:
+    
+        <form style={
+            {
+                padding: "20px",
+                margin: "20px",
+                backgroundColor: "white"
+            }
+        }> </form>
