@@ -1,6 +1,0 @@
-
-
-    * Since my point of view this is the best and professional way of work with CSS
-
-    There are a few steps you have to do before you can start to work with CSS Modules:
-    

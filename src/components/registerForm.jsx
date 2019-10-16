@@ -6,9 +6,9 @@ import FormValidation from "./common/formValidation";
 
 //JS Services Imports
 import validations from "../services/validations/validationsRegisterForm";
-//CSS Imports
-//import formStyles from "../../styles/form.js";
-import formStyles from "../styles/form.css";
+
+//CSS Module Imports
+import styles from "../styles/form.module.css";
 
 class Form extends FormValidation {
   state = {
@@ -39,7 +39,7 @@ class Form extends FormValidation {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <input
             type="email"
             name="email"
@@ -48,10 +48,10 @@ class Form extends FormValidation {
             onChange={this.handleOnChange}
           ></input>
           {this.state.errors.email && (
-            <p className="input-error">{this.state.errors.email}</p>
+            <p className={styles.inputError}>{this.state.errors.email}</p>
           )}
         </div>
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <input
             type="password"
             name="password"
@@ -60,10 +60,10 @@ class Form extends FormValidation {
             onChange={this.handleOnChange}
           ></input>
           {this.state.errors.password && (
-            <p className="input-error">{this.state.errors.password}</p>
+            <p className={styles.inputError}>{this.state.errors.password}</p>
           )}
         </div>
-        <div className="form-group">
+        <div className={styles.formGroup}>
           <input
             type="password"
             name="confirmPassword"
@@ -72,11 +72,13 @@ class Form extends FormValidation {
             onChange={this.handleOnChange}
           ></input>
           {this.state.errors.confirmPassword && (
-            <p className="input-error">{this.state.errors.confirmPassword}</p>
+            <p className={styles.inputError}>
+              {this.state.errors.confirmPassword}
+            </p>
           )}
         </div>
 
-        <button className="btn" type="submit">
+        <button className={styles.btn} type="submit">
           Sign Up
         </button>
       </form>
