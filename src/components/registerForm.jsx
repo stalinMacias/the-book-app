@@ -2,7 +2,7 @@ import React from "react";
 import { toast } from "react-toastify";
 //Components Imports
 import FormValidation from "./common/formValidation";
-//import Input from "./common/input";
+import Input from "./common/input";
 
 //JS Services Imports
 import validations from "../services/validations/validationsRegisterForm";
@@ -39,7 +39,7 @@ class Form extends FormValidation {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <div className={styles.formGroup}>
+        {/*  
           <input
             type="email"
             name="email"
@@ -47,10 +47,22 @@ class Form extends FormValidation {
             value={this.state.email}
             onChange={this.handleOnChange}
           ></input>
+          */}
+        <Input
+          type="email"
+          name="email"
+          placeholder="Type your Email"
+          label="email"
+          value={this.state.email}
+          onChange={this.handleOnChange}
+          error={this.state.errors.email}
+        ></Input>
+        {/** 
           {this.state.errors.email && (
             <p className={styles.inputError}>{this.state.errors.email}</p>
           )}
-        </div>
+          */}
+
         <div className={styles.formGroup}>
           <input
             type="password"
